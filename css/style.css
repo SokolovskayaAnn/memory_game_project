@@ -1,0 +1,156 @@
+@font-face {
+	font-family: Open Sans;
+	src: url(../fonts/2204.ttf);
+}
+@font-face {
+	font-family: Krungthep;
+	src: url(../fonts/krungthep.ttf);
+}
+p {
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+body{
+    color: #FFFFFF;
+    background-color: #1C7430;
+	font-family: 'Open Sans', sans-serif;
+}
+#startend{
+	display:flex;
+	flex-direction: column;
+    align-items: center;
+}
+#img{
+	display: block;
+	width: 503px;
+	height: 262px;	
+	margin-top: 94px;
+}
+#gamename{
+	opacity: 0.85;
+	width: 219px;
+	height: 38px;
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFFFFF;
+	letter-spacing: 0.2px;
+	margin-top: 18px;
+	margin-bottom: 32px;
+}
+#score{
+    width: 350px;
+	height: 70px;
+	font-size: 24px;
+	text-transform: none;
+	text-align: center;
+	color: #FFFFFF;
+	letter-spacing: 0.15px;
+	line-height: 35px;
+	margin-top: 18px;
+	margin-bottom: 32px;
+}
+#btnStart , #btnAgain{
+	opacity: 0.85;
+	background: #FFFFFF;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #1C7430;
+	letter-spacing: .5px;
+	text-decoration: none;
+	padding: 12px 22px;
+}
+#menu{
+	width: 100%;
+	margin: 54px 0px 0px 0px;
+	font-size: 14px;
+	text-align: justify;
+}
+#menu:after { 
+    content: '';
+    width: 100%;
+    display: inline-block;
+}
+#btnStartAgain{
+	display: inline-block;
+	opacity: 0.8;
+	color: #FFFFFF;
+	background:#1C7430;
+	text-decoration: none;
+	letter-spacing: 0.25px;
+	font-size: 14px;
+	padding-left: 19%;
+}
+#textscore, #currentScore{
+    display: inline-block;
+	opacity: 0.8;
+	margin: 0px;
+}
+#textscore{
+	text-align: right;
+	
+}
+#currentScore{
+	font-family: Krungthep;
+	padding-right: 19%;
+	float: right;
+	line-height: 21px;
+}
+#deck{
+	height:600px;
+	padding-left: 18%;
+	padding-right: 17%;
+}
+.card-container {
+	width:14.5%;
+	height:32%;
+	float:left;
+	color:black;
+	perspective: 700px;
+	margin: 1%;
+	position: relative;
+	display:block;
+	
+}
+.card {
+	position: absolute;
+	cursor:pointer;
+	
+	width: 100%;
+	height: 100%;
+	display:block;
+	transform-style: preserve-3d;
+	
+	animation-name: startflip;
+	animation-duration: 0.5s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+  
+}
+@keyframes startflip{
+	100%{transform: rotateY(180deg);}
+}
+
+.back{
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: all 0.5s ease-in-out;
+}
+.front{
+	position: absolute;
+  	width: 100%;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+	transition: all 0.5s ease-in-out;
+	
+}
+.front img,.back img {
+  		max-width: 92%;
+  		display: block;
+  		margin: 0 auto;
+  		max-height: 82%;
+  	}
+

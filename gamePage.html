@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/memorygame.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+        <a id="btnStartAgain" href="gamePage.html" data-tid="Menu-newGame">Начать заново</a>
+        <p id="textscore">Очки:&nbsp; </p>
+        <p id="currentScore" data-tid="Menu-scores">0</p>
+    </div>
+    <div id="deck" data-tid="Deck">
+
+    </div>
+    <script>
+        currentCards();
+        newBoard();
+    </script>
+</body>
+
+</html>
